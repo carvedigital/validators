@@ -22,6 +22,7 @@ class ValidatorsServiceProvider extends ServiceProvider {
 		$this->app['validator']->extend('postcode', 'Carve\Validators\Address@postcode');
 		$this->app['validator']->extend('sortcode', 'Carve\Validators\Bank@sortCode');
 		$this->app['validator']->extend('bankaccount', 'Carve\Validators\Bank@accountNumber');
+		$this->app['validator']->extend('utr', 'Carve\Validators\Person@utr');
 		$this->app['validator']->extend('nationalinsurance', 'Carve\Validators\Person@nationalInsuranceNumber');
 	}
 

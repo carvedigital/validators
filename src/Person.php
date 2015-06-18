@@ -16,4 +16,18 @@ class Person {
         return (preg_match($validation_expression, $value) > 0 ? true : false);
     }
 
+    /**
+     * Validate a UK Unique Tax Payer Reference Number
+     * @param $attribute
+     * @param $value
+     * @param $parameters
+     * @return bool
+     */
+    public function utr($attribute,$value,$parameters)
+    {
+        $validation_expression = '/\d{10}/i';
+
+        return (preg_match($validation_expression, $value) > 0 ? true : false);
+    }
+
 }
