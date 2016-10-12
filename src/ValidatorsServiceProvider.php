@@ -24,6 +24,13 @@ class ValidatorsServiceProvider extends ServiceProvider {
 		$this->app['validator']->extend('bankaccount', 'Carve\Validators\Bank@accountNumber');
 		$this->app['validator']->extend('utr', 'Carve\Validators\Person@utr');
 		$this->app['validator']->extend('nationalinsurance', 'Carve\Validators\Person@nationalInsuranceNumber');
+
+		$this->app['validator']->extend('phonenumber', 'Carve\Validators\Phone@phoneNumber');
+		$this->app['validator']->extend('mobilenumber', 'Carve\Validators\Phone@mobileNumber');
+		$this->app['validator']->extend('landlinenumber', 'Carve\Validators\Phone@landlineNumber');
+		$this->app['validator']->extend('freefonenumber', 'Carve\Validators\Phone@freeNumber');
+		$this->app['validator']->extend('businessphonenumber', 'Carve\Validators\Phone@businessNumber');
+		$this->app['validator']->extend('premiumphonenumber', 'Carve\Validators\Phone@premiumNumber');
 	}
 
 	/**
